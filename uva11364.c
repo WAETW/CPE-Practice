@@ -8,29 +8,23 @@ int main()
     for(int i = 0; i < test_cases; i++)
     {
         int number_of_store = 0;
-        int store[20];
+        int input;
+        int max = -1, min = 100;
         scanf("%d", &number_of_store);
         for(int j = 0; j < number_of_store; j++)
         {
-            scanf("%d", &store[j]);
-        }
-        for(int j = 0; j < number_of_store; j++)
-        {
-            for(int sort_it = j + 1; sort_it < number_of_store; sort_it++)
+            scanf("%d", &input);
+            if (input > max)
             {
-                if(store[j] > store[sort_it])
-                {
-                    int tmp = store[j];
-                    store[j] = store[sort_it];
-                    store[sort_it] = tmp;
-                }
+                max = input;
+            }
+            if (input < min)
+            {
+                min = input;
             }
         }
-        result[i] = (store[number_of_store - 1] - store[0]) * 2;
+        printf("%d\n", (max - min)*2);
     }
-    for(int i = 0; i < test_cases; i++)
-    {
-        printf("%d\n", result[i]);
-    }
+    
     return 0;
 }
