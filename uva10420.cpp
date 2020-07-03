@@ -11,6 +11,7 @@ void solve(string s1, unordered_map<string ,int> &mp){
 
 int main(){
     ios::sync_with_stdio(false);
+    cin.tie(NULL);
     int N = 0;
     unordered_map<string ,int> mp;
     cin >> N;
