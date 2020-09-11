@@ -2,9 +2,6 @@
 
 using namespace std;
 
-void helper(vector<vector<int>> &mp, int i, int j, int x, int y){
-
-}
 void solve(){
     int m, n;
     int total_error = 0;
